@@ -6,9 +6,10 @@ public class Number_Game {
         System.out.println("Welcome to Number Guessing Game ☺");
         // Generating a Random Number from 1 to 100 
         int Answer =  (int) (Math.random() * 100) + 1;
-        // Chances are Created to represent Number of Trials
-        int Chance = 4;
-        Scanner sc= new Scanner(System.in);  
+        Scanner sc= new Scanner(System.in); 
+        System.out.print("Enter the Number of Chances by you're Choice : ");
+         // Chance are Created to represent Number of Trials
+        int Chance = sc.nextInt(); 
         boolean correct = false;
         while(Chance > 0) {
             System.out.println("Enter the Guessed Number broo ");
@@ -18,7 +19,7 @@ public class Number_Game {
                 System.out.print("You're Right the correct answer is " + Answer);
             }
             else if(Guess > Answer) {
-                System.out.println("You're entered Number is Comparitively High ....Please take another"   + (Chance - 1)+ " Chance");
+                System.out.println("You're entered Number is Comparitively High ....Please take another "   + (Chance - 1)+ " Chance");
                 Chance--;
             }
             else {

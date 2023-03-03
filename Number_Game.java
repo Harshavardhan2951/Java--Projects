@@ -4,32 +4,31 @@ import java.util.Scanner;
 public class Number_Game {
     public static void main(String[] args) {
         System.out.println("Welcome to Number Guessing Game ☺");
-        // Generate Random Number from 1 - 100 using Math package in java
-        int Answer = (int) (Math.random() * 100) + 1;
-        // Lets create a Number if trials that user has to accompolish the chances
-        int Chances = 4;
+        // Generating a Random Number from 1 to 100 
+        int Answer =  (int) (Math.random() * 100) + 1;
+        // Chances are Created to represent Number of Trials
+        int Chance = 4;
         Scanner sc= new Scanner(System.in);  
         boolean correct = false;
-        while(Chances > 0) {
+        while(Chance > 0) {
             System.out.println("Enter the Guessed Number broo ");
             int Guess = sc.nextInt();
-            // IF the Guess Chooses the right answer 
+            // IF Guesser Chooses the right answer 
             if(Guess == Answer) {
                 System.out.print("You're Right the correct answer is " + Answer);
             }
             else if(Guess > Answer) {
-                System.out.println("You're entered Number is Comparitively High ....Please take"   + (Chances - 1)+ " Chance");
-                Chances--;
+                System.out.println("You're entered Number is Comparitively High ....Please take another"   + (Chance - 1)+ " Chance");
+                Chance--;
             }
             else {
-                System.out.println("You're Guess is too low compared to the Answer....Please utilize the Chances " + (Chances-1) + " left");
+                System.out.println("You're Guess is too low compared to the Answer....Please utilize the Chances " + (Chance-1) + " left");
             }
-            Chances--;
+            Chance--;
         }
         if(correct == false) {
-            System.out.println("You just try making this code by you're self and All the Best ☺☻♥");
+            System.out.println("You can GET IT Try Harder Again......All the Best BROO ☺☻♥");
         }
-        
-
+        System.out.println("The Correct Answer is " + Answer);
     }
 }
